@@ -1,0 +1,29 @@
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px;
+    border-radius: 40px;
+}
+
+.footer-block {
+    width: 530px;
+    
+}
+
+.contact{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.5s;
+    width: 220px;
+    position: relative;
+}
+
+.contact img{
+    max-width: 20px;
+    margin-right: 10px;
+}

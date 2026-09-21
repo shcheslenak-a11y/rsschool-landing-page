@@ -1,0 +1,126 @@
+nav {
+    display:block;
+}
+
+.icon-r{
+    position: relative;
+    height: 32px;
+    top: 16px;
+    left:16px;
+    border-radius: 0;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.theme-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.theme-slider:before {
+    position: absolute;
+    content: url('../images/icons/sun.png');
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: 0s;
+}
+
+.theme-slider:after {
+    position: absolute;
+    content: url('../images/icons/moon.png');
+    height: 26px;
+    width: 26px;
+    right: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input:checked + .theme-slider:after {
+    content: url('../images/icons/moon-dark.png');
+}
+
+.theme-slider:hover:after{
+    content: url('../images/icons/moon-dark.png');
+}
+
+/* Rounded sliders */
+.theme-slider.round {
+  border-radius: 34px;
+}
+
+.theme-slider.round:before {
+  border-radius: 50%;
+}
+
+.theme-slider.round:after{
+  border-radius: 50%;
+}
+
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+ul {
+    list-style: none;
+    padding-inline-start: 40px;
+}
+
+.nav-item {
+    margin: 0 40px 0 0;
+    display: inline-block;
+}
+
+.nav-item::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transform: scaleX(0);
+}
+
+.nav-item:hover::after{
+  transform: scaleX(1);
+  transition: all 0.5s;
+}
+
+header a{
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+
