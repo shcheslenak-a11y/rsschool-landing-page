@@ -33,10 +33,10 @@
                     </ul>
                 </nav> 
                 <div class="instruments">
-                    <label class="theme-switch">
-                        <input id="mode" type="checkbox" onchange="changeMode()">
-                        <span class="theme-slider round"></span>
-                    </label>
+                    <div class="toggler flexbox">
+                        <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg"></div>
+                        <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg"></div>
+                    </div>
                     <a id="header-menu" href="./menu.html" class="link"><div class="underscore">Menu<img src="images/icons/cup.png" alt="icon"></div></a>
                     <div class="roundbutton hidden" onclick="change()">
                         <img src="images/icons/menu-close.svg" id="burger" alt="icon">

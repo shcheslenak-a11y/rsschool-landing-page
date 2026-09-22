@@ -85,6 +85,17 @@ h2, h3 {
   color: inherit;
 }
 
+.toggler {
+  border: 1px solid var(--border-color);
+}
+
+.toggler:hover .toggler-option:not(.toggler-selected){
+  background-color: var(--container-color);
+}
+.toggler-selected {
+  background-color: var(--accent-color);
+}
+
 .choice{
   border: 1px solid var(--border-color);
   color: var(--primary-color);
@@ -94,12 +105,12 @@ h2, h3 {
   background-color: var(--border-color);
 }
 
-.selected.choice{
+.choice:hover, .selected.choice{
   color: var(--inv-color);
   background-color: var(--container-color);
 }
 
-.selected  .choice-icon{
+.choice:hover .choice-icon,.selected  .choice-icon{
   background-color: var(--page-color);
 }
 
