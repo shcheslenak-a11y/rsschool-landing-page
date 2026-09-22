@@ -18,7 +18,7 @@ function setDark(n) {
         let dark = document.getElementById("dark");
 
         (n == 1 ? dark : ligth).classList.add("toggler-selected");
-        (n == 1? ligth : dark).classList.remove("toggler-selected");
+        (n == 1 ? ligth : dark).classList.remove("toggler-selected");
         if (n == 1 || load){    
             var element = document.body;
             cur = element.classList.toggle("dark");
@@ -26,7 +26,7 @@ function setDark(n) {
         }
 
         let img = document.getElementById("logo")
-        img.setAttribute("src", `images/logo${n ? "-dark" : ""}.png`)
+        img.setAttribute("src", `images/logo${n == 1 ? "-dark" : ""}.png`)
     }
     
 }

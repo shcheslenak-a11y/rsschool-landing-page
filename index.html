@@ -32,12 +32,12 @@
                         <li class="nav-item link underscore"><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav> 
-                <div class="instruments">
+                <div class="instruments flexbox">
                     <div class="toggler flexbox">
                         <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg"></div>
                         <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg"></div>
                     </div>
-                    <a id="header-menu" href="./menu.html" class="link"><div class="underscore">Menu<img src="images/icons/cup.png" alt="icon"></div></a>
+                    <a id="header-menu" href="./menu.html" class="link"><div class="menu-item flexbox underscore"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
                     <div class="roundbutton hidden" onclick="change()">
                         <img src="images/icons/menu-close.svg" id="burger" alt="icon">
                     </div>
@@ -50,7 +50,10 @@
                     <a href="./menu.html">
                         <div class="menubutton flexbox">
                             <p class="link">Menu</p>
-                            <img class="hidden" src="images/icons/cup.png" alt="icon">
+                            <div class="show">
+                                <img src="images/icons/coffee-cup.svg" alt="icon">
+                            </div>
+                            
                         </div>
                     </a>
                 </div>
@@ -102,14 +105,14 @@
                     <p class="medium">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
                     <div class="market flexbox">
                         <div class="marketbutton">
-                            <div><img src="images/icons/apple.svg" alt="icon"></div>
+                            <div class="button-icon"><img src="images/icons/apple.svg" alt="icon"></div>
                             <div class="button-content">
                                 <p class="caption">Available on the</p>
                                 <p class="link">App Store</p>
                             </div> 
                         </div>
                         <div class="marketbutton">
-                            <div><img src="images/icons/google.svg" alt="icon"></div>
+                            <div class="button-icon"><img src="images/icons/google.svg" alt="icon"></div>
                             <div class="button-content">
                                 <p class="caption">Available on the</p>
                                 <p class="link">Google Play</p>
@@ -128,9 +131,9 @@
                 <div class="footer-block inv">
                     <h2>Sip, Savor, Smile. <br> <span class="accent">It’s coffee time!</span></h2>
                     <div class="socials flexbox">
-                        <div class="roundbutton"><img src="images/icons/twitter.svg" alt="icon"></div>
-                        <div class="roundbutton"><img src="images/icons/instagram.svg" alt="icon"></div>
-                        <div class="roundbutton"><img src="images/icons/facebook.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/twitter.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/instagram.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/facebook.svg" alt="icon"></div>
                     </div>
                 </div>
                 <div class="footer-block inv">

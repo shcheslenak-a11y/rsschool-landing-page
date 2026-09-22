@@ -92,8 +92,17 @@ h2, h3 {
 .toggler:hover .toggler-option:not(.toggler-selected){
   background-color: var(--container-color);
 }
+
+.toggler:hover .toggler-option:not(.toggler-selected) img{
+  filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+}
+
 .toggler-selected {
   background-color: var(--accent-color);
+}
+
+.toggler-selected img{
+  filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
 }
 
 .choice{
@@ -118,32 +127,6 @@ h2, h3 {
   border: 1px solid var(--border-color);
 }
 
-.theme-slider{
-   background-color: var(--page-color);
-   border: 1px solid var(--border-color);
+.soc.roundbutton:hover {
+    background-color: var(--page-color)
 }
-
-.theme-slider:before{
-  background-color: var(--accent-color);
-}
-
-input:checked + .theme-slider:before{
-  background-color: var(--page-color);
-}
-
-input:checked + .theme-slider:hover:before{
-  background-color: var(--container-color);
-}
-
-.theme-slider:hover:after{
-  background-color: var(--container-color);
-}
-
-input:checked + .theme-slider:after{
-  background-color: var(--accent-color);
-}
-
-input:checked + .theme-slider:hover:after{
-  background-color: var(--accent-color);
-}
-

@@ -9,10 +9,8 @@ ul {
 }
 
 .instruments{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 184px;
+    height: 44px;
 }
 
 .offer {
@@ -44,4 +42,9 @@ ul {
 
 .toggler-option img{
     margin: 7px;
+}
+
+.menu-item {
+    width: 61px;
+    height: 28px;
 }
