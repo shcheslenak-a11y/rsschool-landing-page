@@ -1,4 +1,5 @@
 let storage = window.localStorage;
+let burgerCur = 0
 
 let theme = storage.getItem("dark-theme")
 
@@ -24,4 +25,10 @@ function changeMode() {
     let img = document.getElementById("logo")
     img.setAttribute("src", `images/logo${cur ? "-dark" : ""}.png`)
     storage.setItem("dark-theme", cur)
+}
+
+function change() {
+    burgerCur += 1
+    let img = document.getElementById("burger")
+    img.setAttribute("src", `images/icons/menu-${burgerCur%2 ? "close" : "open"}.svg`)
 }

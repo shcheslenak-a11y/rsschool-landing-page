@@ -1,15 +1,3 @@
-nav {
-    display:block;
-}
-
-.icon-r{
-    position: relative;
-    height: 32px;
-    top: 16px;
-    left:16px;
-    border-radius: 0;
-}
-
 .theme-switch {
     position: relative;
     display: inline-block;
@@ -84,14 +72,6 @@ input:checked + .theme-slider:after {
 }
 
 
-.main-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
 ul {
     list-style: none;
     padding-inline-start: 40px;
@@ -102,25 +82,23 @@ ul {
     display: inline-block;
 }
 
-.nav-item::after{
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #000;;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  transform: scaleX(0);
+.instruments{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.nav-item:hover::after{
-  transform: scaleX(1);
-  transition: all 0.5s;
+.offer {
+    max-width: 530px;
 }
 
-header a{
-    text-decoration: none;
-    transition: all 0.5s;
+#offer {
+    padding: 100px;
+    max-width: 1360px;
+    height: 644px;
+    margin-bottom: 100px;
+    background: url('../images/img-hero.png'), #E1D4C9;
+    background-position: center;
+    border-radius: 40px;
 }
-
-

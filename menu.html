@@ -1,44 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link href="styles/style-1.css" rel="stylesheet" />
-        <link href="styles/style-light.css" rel="stylesheet" />
-        <script src="javascript/main.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee-House</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link href="styles/common.css" rel="stylesheet">
+        <link href="styles/header.css" rel="stylesheet">
+        <link href="styles/footer.css" rel="stylesheet">
+        <link href="styles/buttons.css" rel="stylesheet">
+        <link href="styles/style-light.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+
+        <link href="styles/styles-menu.css" rel="stylesheet" >
+        
     </head>
 
     <body>
         <header>
-            <img src="images/logo.png">
-            <nav>
-                <ul>
-                    <li>Favorite coffee</li>
-                    <li>About</li>
-                    <li>Mobile app</li>
-                    <li>Contact us</li>
-                </ul>
-            </nav>
-            
+            <div class="flexbox">
+                <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
+                <nav class="nav">
+                    <ul>
+                        <li class="nav-item link underscore"><a href="#favorite"><div class="underscore">Favorite coffee</div></a></li>
+                        <li class="nav-item link underscore"><a href="#about">About</a></li>
+                        <li class="nav-item link underscore"><a href="#mobile">Mobile app</a></li>
+                        <li class="nav-item link underscore"><a href="#contact">Contact us</a></li>
+                    </ul>
+                </nav> 
+                <div class="instruments">
+                    <label class="theme-switch">
+                        <input id="mode" type="checkbox" onchange="changeMode()">
+                        <span class="theme-slider round"></span>
+                    </label>
+                    <a id="header-menu" href="./menu.html" class="link"><div class="underscore">Menu<img src="images/icons/cup.png"  alt="icon"></div></a>
+                    <div class="roundbutton hidden" onclick="change()">
+                        <img src="images/icons/menu-close.svg" id="burger" alt="icon">
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main>
-            
+            <section>
+                <h2>Behind each of our cups hides an <span class="accent">amazing surprise</span></h2>
+                <div class="tab flexbox">
+                    <div class="selected choice flexbox">
+                        <div class="choice-icon">☕</div>
+                        <div class="choice-text">Coffee</div>
+                    </div>
+                    <div class="choice flexbox">
+                        <div class="choice-icon">☕</div>
+                        <div class="choice-text">Tea</div>
+                    </div>
+                    <div class="choice flexbox">
+                        <div class="choice-icon">☕</div>
+                        <div class="choice-text">Dessert</div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="grid flexbox">
+                    <div class="preview">
+                        <div class="box"><img src="images/coffee/1.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Irish coffee</h3>
+                                <p class="medium">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                            </div>
+                            <h3>$7.00</h3>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div class="box"><img src="images/coffee/2.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Kahlua coffee</h3>
+                                <p class="medium">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                            </div>
+                            <h3>$7.00</h3>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div class="box"><img src="images/coffee/3.png"  alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Honey raf</h3>
+                                <p class="medium">Espresso with frothed milk, cream and aromatic honey</p>
+                            </div>
+                            <h3>$5.50</h3>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div class="box"><img src="images/coffee/4.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Ice cappuccino</h3>
+                                <p class="medium">Cappuccino with soft thick foam in summer version with ice</p>
+                            </div>
+                            <h3>$5.00</h3>
+                        </div>
+                    </div>
+                    <div class="preview hide">
+                        <div class="box"><img src="images/coffee/5.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Espresso</h3>
+                                <p class="medium">Classic black coffee</p>
+                            </div>
+                            <h3>$4.50</h3>
+                        </div>
+                    </div>
+                    <div class="preview hide">
+                        <div class="box"><img src="images/coffee/6.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Latte</h3>
+                                <p class="medium">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                            </div>
+                            <h3>$5.50</h3>
+                        </div>
+                    </div>
+                    <div class="preview hide">
+                        <div class="box"><img src="images/coffee/7.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Latte macchiato</h3>
+                                <p class="medium">Espresso with frothed milk and chocolate</p>
+                            </div>
+                            <h3>$5.50</h3>
+                        </div>
+                    </div>
+                    <div class="preview hide">
+                        <div class="box"><img src="images/coffee/8.png" alt="item"></div>
+                        <div class="description">
+                            <div class="title">
+                                <h3>Coffee with cognac</h3>
+                                <p class="medium">Fragrant black coffee with cognac and whipped cream</p>
+                            </div>
+                            <h3>$6.50</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="roundbutton hidden center">
+                    <img src="images/icons/refresh.svg" alt="icon">
+                </div>
+            </section>   
         </main>
 
         <footer>
-            <div clas="container">
-                <div class="left">
-                    <h2>Sip, Savor, Smile. <br/> <span class="accent">It’s coffee time!</span></h2>
-                    
+            <section id="contact" class="container">
+                <div class="footer-block inv">
+                    <h2>Sip, Savor, Smile. <br> <span class="accent">It’s coffee time!</span></h2>
+                    <div class="socials flexbox">
+                        <div class="roundbutton"><img src="images/icons/twitter.svg" alt="icon"></div>
+                        <div class="roundbutton"><img src="images/icons/instagram.svg" alt="icon"></div>
+                        <div class="roundbutton"><img src="images/icons/facebook.svg" alt="icon"></div>
+                    </div>
                 </div>
-                <div class="rigth">
+                <div class="footer-block inv">
                     <h3>Contact us</h3>
-                    <ul>
-                        <li>8558 Green Rd.,  LA</li>
-                        <li>+1 (603) 555-0123</li>
-                        <li>Mon–Sat: 9:00–23:00</li>
-                    </ul>
+                    <a href="https://goo.gl/maps/qpjtya1pxzKT96oP6" target="_blank">
+                        <div class="contact underscore">
+                            <img src="images/icons/pin-alt.png" alt="icon">
+                            <p>8558 Green Rd.,  LA</p>
+                        </div>
+                    </a>
+                    <a  href='tel:+16035550123'>
+                    <div class="contact underscore">
+                        <img src="images/icons/phone.png" alt="icon">
+                        <p>+1 (603) 555-0123</p>
+                    </div>
+                    </a>
+                    <div class="contact">
+                        <img src="images/icons/clock.png" alt="icon">
+                        <p>Mon-Sat: 9:00 AM – 23:00 PM</p>
+                    </div>
                 </div>
-            </div>
+            </section>
         </footer>
+        <script src="javascript/main.js"></script>
     </body>
 </html>

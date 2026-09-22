@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link href="styles/style-1.css" rel="stylesheet" />
-        <link href="styles/header.css" rel="stylesheet" />
-        <link href="styles/footer.css" rel="stylesheet" />
-        <link href="styles/style-light.css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee-House</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link href="styles/common.css" rel="stylesheet">
+        <link href="styles/header.css" rel="stylesheet">
+        <link href="styles/footer.css" rel="stylesheet">
+        <link href="styles/buttons.css" rel="stylesheet">
+        <link href="styles/style-light.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+
+        <link href="styles/styles-index.css" rel="stylesheet">
+
+        <link href="styles/slider.css" rel="stylesheet">
+        <link href="styles/about.css" rel="stylesheet">
+        <link href="styles/mobile.css" rel="stylesheet">
         
     </head>
 
     <body>
         <header>
-            <div class="main-menu">
-                <a href="./index.html"><img src="images/logo.png" id="logo"></a>
+            <div class="flexbox">
+                <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
                 <nav class="nav">
                     <ul>
-                        <li class="nav-item link">Favorite coffee</li>
-                        <li class="nav-item link">About</li>
-                        <li class="nav-item link">Mobile app</li>
-                        <li class="nav-item link">Contact us</li>
+                        <li class="nav-item link underscore"><a href="#favorite"><div class="underscore">Favorite coffee</div></a></li>
+                        <li class="nav-item link underscore"><a href="#about">About</a></li>
+                        <li class="nav-item link underscore"><a href="#mobile">Mobile app</a></li>
+                        <li class="nav-item link underscore"><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav> 
-                <div class="r">
+                <div class="instruments">
                     <label class="theme-switch">
                         <input id="mode" type="checkbox" onchange="changeMode()">
                         <span class="theme-slider round"></span>
                     </label>
-                    <a href="./menu.html" class="link">Menu<img src="images/icons/cup.png" class="icon-r icon"></a>
+                    <a id="header-menu" href="./menu.html" class="link"><div class="underscore">Menu<img src="images/icons/cup.png" alt="icon"></div></a>
+                    <div class="roundbutton hidden" onclick="change()">
+                        <img src="images/icons/menu-close.svg" id="burger" alt="icon">
+                    </div>
                 </div>
             </div>
-            <section class="container">
-                <img src="images/img-hero.png" alt="Image">
-                <div class="centered">
+            <section id="offer" class="container">
+                <div class="offer">
                     <h1 class="inv"><span class="accent">Enjoy</span> premium coffee at our charming cafe</h1>
                     <p class="medium inv">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
                     <a href="./menu.html">
-                        <div class="button">
+                        <div class="menubutton flexbox">
                             <p class="link">Menu</p>
+                            <img class="hidden" src="images/icons/cup.png" alt="icon">
                         </div>
                     </a>
                 </div>
@@ -43,96 +58,90 @@
         </header>
 
         <main>
-            <div>
+            <section id="favorite">
                 <h2>Choose your <span class="accent">favorite</span> coffee</h2>
-                <div class="slider">
-                    <div class="slide" style="display: grid;">
-                        <img src="images/slider/1.png">
+                <div class="slider flexbox">
+                    <div class="roundbutton hide">
+                        <img src="images/icons/arrow-left.svg" alt="icon">
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/slider/1.png" alt="slide">
                         <h3>S’mores Frappuccino</h3>
                         <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                         <h3>$5.50</h3>
                     </div>
-                    <div class="slide">
-                        <img src="images/slider/2.png">
-                        <h3>Caramel Macchiato</h3>
-                        <p class="medium">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
-                        <h3>$5.00</h3>
-                    </div>
-                    <div class="slide">
-                        <img src="images/slider/3.png">
-                        <h3>Ice coffee</h3>
-                        <p class="medium">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
-                        <h3>$4.50</h3>
-                    </div>
-                    <div class="button prev icon">
-                        <img src="images/icons/arrow-l.png">
-                    </div>
-                    <div class="button next icon">
-                        <img src="images/icons/arrow-r.png">
-                    </div>
-                    <div style="text-align:center">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
+
+                    <div class="roundbutton hide">
+                        <img src="images/icons/arrow-right.svg" alt="icon">
+                    </div>       
                 </div>
-            </div>
-            <div>
+                <div>
+                    <span class="dot selected"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+
+            <section id="about">
                 <h2>Resource is <span class="accent">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
-                <div class="left">
-                    <img src="images/about/1.png" class="image">
-                    <img src="images/about/3.png" class="image crop">
+                <div class="colage flexbox">
+                    <div>
+                        <div class="image margin"><img src="images/about/1.png" alt="about"></div>
+                        <div class="image"><img src="images/about/2.png" class="crop" alt="about"></div>
+                    </div>
+                    <div>
+                        <div class="image margin"><img src="images/about/3.png" class="crop" alt="about"></div>
+                        <div class="image"><img src="images/about/4.png" alt="about"></div>
+                    </div>
                 </div>
-                <div class="rigth">
-                    <img src="images/about/2.png" class="image crop">
-                    <img src="images/about/4.png" class="image">
-                </div>
-            </div>
-            <div>
-                <div class="left">
-                    <h2>Download our app to start ordering</h2>
+            </section>
+            <section id="mobile" class="flexbox">
+                <div class="block">
+                    <h2><span class="accent">Download</span> our app to start ordering</h2>
                     <p class="medium">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
-                    <div class="market">
-                        <div class="button mobile">
-                            <div class="icon"><img src="images/icons/apple.png" class="icon-l"></div>
+                    <div class="market flexbox">
+                        <div class="marketbutton">
+                            <div><img src="images/icons/apple.svg" alt="icon"></div>
                             <div class="button-content">
                                 <p class="caption">Available on the</p>
                                 <p class="link">App Store</p>
                             </div> 
                         </div>
-                        <div class="button mobile">
-                            <div class="icon"><img src="images/icons/google.png" class="icon-l"></div>
+                        <div class="marketbutton">
+                            <div><img src="images/icons/google.svg" alt="icon"></div>
                             <div class="button-content">
                                 <p class="caption">Available on the</p>
                                 <p class="link">Google Play</p>
                             </div>
                         </div>
-                    </ul>
-                    
+                    </div>
                 </div>
-                <div class="rigth">
-                    <img src="images/mobile.png">
+                <div class="block">
+                    <img src="images/mobile.png" alt="mobile">
                 </div>
-            </div>
+            </section>
         </main>
 
         <footer>
-            <div class="container">
+            <section id="contact" class="container">
                 <div class="footer-block inv">
-                    <h2>Sip, Savor, Smile. <br/> <span class="accent">It’s coffee time!</span></h2>
-                    <div class="socials">
-                        <div class="icon"><img src=""></div>
+                    <h2>Sip, Savor, Smile. <br> <span class="accent">It’s coffee time!</span></h2>
+                    <div class="socials flexbox">
+                        <div class="roundbutton"><img src="images/icons/twitter.svg" alt="icon"></div>
+                        <div class="roundbutton"><img src="images/icons/instagram.svg" alt="icon"></div>
+                        <div class="roundbutton"><img src="images/icons/facebook.svg" alt="icon"></div>
                     </div>
                 </div>
                 <div class="footer-block inv">
                     <h3>Contact us</h3>
-                    <a class="contact-btn" href="https://goo.gl/maps/qpjtya1pxzKT96oP6" target="_blank">
-                        <div class="contact">
+                    <a href="https://goo.gl/maps/qpjtya1pxzKT96oP6" target="_blank">
+                        <div class="contact underscore">
                             <img src="images/icons/pin-alt.png" alt="icon">
                             <p>8558 Green Rd.,  LA</p>
                         </div>
                     </a>
-                    <a class="contact-btn" href='tel:+16035550123'>
+                    <a  href='tel:+16035550123'>
                     <div class="contact underscore">
                         <img src="images/icons/phone.png" alt="icon">
                         <p>+1 (603) 555-0123</p>
@@ -143,7 +152,7 @@
                         <p>Mon-Sat: 9:00 AM – 23:00 PM</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </footer>
         <script src="javascript/main.js"></script>
     </body>
