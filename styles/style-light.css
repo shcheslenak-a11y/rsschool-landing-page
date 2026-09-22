@@ -21,6 +21,9 @@ body {
   --inv-color: #E1D4C9;
 }
 
+.nav-item::after, #header-menu::after{
+  background-color: var(--primary-color);
+}
 
 body {
   background-color: var(--page-color);
@@ -64,8 +67,12 @@ body {
   background-color: var(--inv-color);
 }
 
-footer .container {
+#contact {
   background-color: var(--container-color);
+}
+
+#address::after, #phone::after{
+  background-color: var(--primary-color);
 }
 
 .inv{

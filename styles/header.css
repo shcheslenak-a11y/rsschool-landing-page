@@ -6,7 +6,45 @@ ul {
 .nav-item {
     margin: 0 40px 0 0;
     display: inline-block;
+    transition: all 0.5s;
+    position: relative;
 }
+
+.nav-item::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+}
+
+.nav-item:hover::after{
+    transform: scaleX(1);
+    transition: all 0.5s;
+}
+
+#header-menu {
+    transition: all 0.5s;
+    position: relative;
+}
+
+#header-menu::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+}
+
+#header-menu:hover::after{
+    transform: scaleX(1);
+    transition: all 0.5s;
+}
+
 
 .instruments{
     width: 184px;
@@ -47,4 +85,16 @@ ul {
 .menu-item {
     width: 61px;
     height: 28px;
+}
+
+.roundbutton.burger {
+    height:44px;
+    width: 44px;
+}
+
+.roundbutton.burger img{
+    height: 11px;
+    width: 11px;
+    padding: 16px;
+    margin: 0px;
 }
