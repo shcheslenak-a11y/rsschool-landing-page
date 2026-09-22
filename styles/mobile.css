@@ -2,6 +2,24 @@
     width: 420px;
 }
 
+.button-icon {
+    width: 36px;
+    height: 36px;
+    padding: 13px;
+}
+
+.button-icon img{
+    margin: 0;
+}
+
+.button-content {
+    height: 40px;
+}
+
 #mobile .block{
     max-width: 630px;
+}
+
+p {
+    margin:auto;
 }

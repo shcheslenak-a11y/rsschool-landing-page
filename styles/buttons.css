@@ -34,18 +34,18 @@
 }
 
 .menubutton {
-    width: 100px;
-    height: 30px;
-    padding: 15px;
+    width: 200px;
+    height:  64px;
+    padding: 20px 78px 20px 78px;
     border-radius: 100px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.menubutton:hover img{
+.show {
+    display: none;
+}
+
+.menubutton:hover .show{
     display: block;
 }
 
@@ -54,7 +54,15 @@
 }
 
 
-.roundbutton:hover img{
+body:not(.dark) .soc.roundbutton:hover img{
     filter: brightness(0) saturate(100%) invert(24%) sepia(9%) saturate(133%) hue-rotate(2deg) brightness(96%) contrast(96%);
 }
 
+
+.dark .marketbutton img,.dark .roundbutton img, .dark .menu-item img, .dark .menubutton:hover img{
+    filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+}
+
+.p {
+    margin:0;
+}

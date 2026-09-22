@@ -21,6 +21,9 @@ body {
   --inv-color: #E1D4C9;
 }
 
+.nav-item::after, #header-menu::after{
+  background-color: var(--primary-color);
+}
 
 body {
   background-color: var(--page-color);
@@ -64,8 +67,12 @@ body {
   background-color: var(--inv-color);
 }
 
-footer .container {
+#contact {
   background-color: var(--container-color);
+}
+
+#address::after, #phone::after{
+  background-color: var(--primary-color);
 }
 
 .inv{
@@ -85,6 +92,26 @@ h2, h3 {
   color: inherit;
 }
 
+.toggler {
+  border: 1px solid var(--border-color);
+}
+
+.toggler:hover .toggler-option:not(.toggler-selected){
+  background-color: var(--container-color);
+}
+
+.toggler:hover .toggler-option:not(.toggler-selected) img{
+  filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+}
+
+.toggler-selected {
+  background-color: var(--accent-color);
+}
+
+.toggler-selected img{
+  filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+}
+
 .choice{
   border: 1px solid var(--border-color);
   color: var(--primary-color);
@@ -94,12 +121,12 @@ h2, h3 {
   background-color: var(--border-color);
 }
 
-.selected.choice{
+.choice:hover, .selected.choice{
   color: var(--inv-color);
   background-color: var(--container-color);
 }
 
-.selected  .choice-icon{
+.choice:hover .choice-icon,.selected  .choice-icon{
   background-color: var(--page-color);
 }
 
@@ -107,32 +134,6 @@ h2, h3 {
   border: 1px solid var(--border-color);
 }
 
-.theme-slider{
-   background-color: var(--page-color);
-   border: 1px solid var(--border-color);
+.soc.roundbutton:hover {
+    background-color: var(--page-color)
 }
-
-.theme-slider:before{
-  background-color: var(--accent-color);
-}
-
-input:checked + .theme-slider:before{
-  background-color: var(--page-color);
-}
-
-input:checked + .theme-slider:hover:before{
-  background-color: var(--container-color);
-}
-
-.theme-slider:hover:after{
-  background-color: var(--container-color);
-}
-
-input:checked + .theme-slider:after{
-  background-color: var(--accent-color);
-}
-
-input:checked + .theme-slider:hover:after{
-  background-color: var(--accent-color);
-}
-

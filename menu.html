@@ -21,20 +21,20 @@
             <div class="flexbox">
                 <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
                 <nav class="nav">
-                    <ul>
-                        <li class="nav-item link underscore"><a href="#favorite"><div class="underscore">Favorite coffee</div></a></li>
-                        <li class="nav-item link underscore"><a href="#about">About</a></li>
-                        <li class="nav-item link underscore"><a href="#mobile">Mobile app</a></li>
-                        <li class="nav-item link underscore"><a href="#contact">Contact us</a></li>
+                    <ul class="">
+                        <li class="nav-item link"><a href="#favorite">Favorite coffee</a></li>
+                        <li class="nav-item link"><a href="#about">About</a></li>
+                        <li class="nav-item link"><a href="#mobile">Mobile app</a></li>
+                        <li class="nav-item link"><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav> 
-                <div class="instruments">
-                    <label class="theme-switch">
-                        <input id="mode" type="checkbox" onchange="changeMode()">
-                        <span class="theme-slider round"></span>
-                    </label>
-                    <a id="header-menu" href="./menu.html" class="link"><div class="underscore">Menu<img src="images/icons/cup.png"  alt="icon"></div></a>
-                    <div class="roundbutton hidden" onclick="change()">
+                <div class="instruments flexbox">
+                    <div class="toggler flexbox">
+                        <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg"></div>
+                        <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg"></div>
+                    </div>
+                    <a id="header-menu" href="./menu.html" class="link hide"><div class="menu-item flexbox"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
+                    <div class="burger roundbutton hidden" onclick="change()">
                         <img src="images/icons/menu-close.svg" id="burger" alt="icon">
                     </div>
                 </div>
@@ -46,15 +46,15 @@
                 <h2>Behind each of our cups hides an <span class="accent">amazing surprise</span></h2>
                 <div class="tab flexbox">
                     <div class="selected choice flexbox">
-                        <div class="choice-icon">☕</div>
+                        <div class="choice-icon"><img src="images/icons/coffee.svg" alt="icon"></div>
                         <div class="choice-text">Coffee</div>
                     </div>
                     <div class="choice flexbox">
-                        <div class="choice-icon">☕</div>
+                        <div class="choice-icon"><img src="images/icons/tea.svg" alt="icon"></div>
                         <div class="choice-text">Tea</div>
                     </div>
                     <div class="choice flexbox">
-                        <div class="choice-icon">☕</div>
+                        <div class="choice-icon"><img src="images/icons/dessert.svg" alt="icon"></div>
                         <div class="choice-text">Dessert</div>
                     </div>
                 </div>
@@ -149,31 +149,31 @@
             </section>   
         </main>
 
-        <footer>
-            <section id="contact" class="container">
+       <footer>
+            <section id="contact" class="flexbox">
                 <div class="footer-block inv">
                     <h2>Sip, Savor, Smile. <br> <span class="accent">It’s coffee time!</span></h2>
                     <div class="socials flexbox">
-                        <div class="roundbutton"><img src="images/icons/twitter.svg" alt="icon"></div>
-                        <div class="roundbutton"><img src="images/icons/instagram.svg" alt="icon"></div>
-                        <div class="roundbutton"><img src="images/icons/facebook.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/twitter.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/instagram.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/facebook.svg" alt="icon"></div>
                     </div>
                 </div>
-                <div class="footer-block inv">
+                <div class="footer-block inv flexbox">
                     <h3>Contact us</h3>
-                    <a href="https://goo.gl/maps/qpjtya1pxzKT96oP6" target="_blank">
-                        <div class="contact underscore">
+                    <a id="address" href="https://goo.gl/maps/qpjtya1pxzKT96oP6" target="_blank">
+                        <div class="contact flexbox">
                             <img src="images/icons/pin-alt.png" alt="icon">
                             <p>8558 Green Rd.,  LA</p>
                         </div>
                     </a>
-                    <a  href='tel:+16035550123'>
-                    <div class="contact underscore">
+                    <a id="phone" href='tel:+16035550123'>
+                    <div class="contact flexbox">
                         <img src="images/icons/phone.png" alt="icon">
                         <p>+1 (603) 555-0123</p>
                     </div>
                     </a>
-                    <div class="contact">
+                    <div class="contact flexbox">
                         <img src="images/icons/clock.png" alt="icon">
                         <p>Mon-Sat: 9:00 AM – 23:00 PM</p>
                     </div>
