@@ -1,0 +1,70 @@
+.tab {
+    width: 361px;
+    height: 46px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.choice{
+    padding: 8px 16px 8px 8px;
+    height: 30px;
+    border-radius: 100px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.choice-icon{
+    width: 16px;
+    height: 16px;
+    padding: 7px;
+    margin-right: 8px; 
+    border-radius: 100px;
+}
+
+.choice-text{
+    height: 24px
+}
+
+.preview {
+    width: 310px;
+    height: 506px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+.box {
+    width: 310px;
+    height: 310px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.box img{
+    transform: scale(1.1);
+}
+
+.box:hover img{
+    transform: scale(1);
+}
+
+.title {
+    width: 270px;
+    height: 114px
+}
+
+.description {
+    width: 310px;
+    height: 196px;
+    padding: 20px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.center{
+    margin: auto;
+}
+
+.socials {
+    width: 204px;
+}

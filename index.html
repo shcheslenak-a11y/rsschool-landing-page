@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee-House</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link href="styles/common.css" rel="stylesheet">
+        <link href="styles/header.css" rel="stylesheet">
+        <link href="styles/footer.css" rel="stylesheet">
+        <link href="styles/buttons.css" rel="stylesheet">
+        <link href="styles/style-light.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+
+        <link href="styles/styles-index.css" rel="stylesheet">
+
+        <link href="styles/slider.css" rel="stylesheet">
+        <link href="styles/about.css" rel="stylesheet">
+        <link href="styles/mobile.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="flexbox main-menu">
+                <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
+                <nav class="nav">
+                    <ul>
+                        <li class="nav-item link"><a href="#favorite">Favorite coffee</a></li>
+                        <li class="nav-item link"><a href="#about">About</a></li>
+                        <li class="nav-item link"><a href="#mobile">Mobile app</a></li>
+                        <li class="nav-item link"><a href="#contact">Contact us</a></li>
+                    </ul>
+                </nav> 
+                <div class="instruments flexbox">
+                    <div class="toggler flexbox">
+                        <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg" alt="sun"></div>
+                        <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg" alt="moon"></div>
+                    </div>
+                    <a id="header-menu" href="./menu.html" class="link hide"><div class="menu-item flexbox"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
+                    <div class="burger roundbutton hidden" onclick="change()">
+                        <img src="images/icons/menu-close.svg" id="burger" alt="icon">
+                    </div>
+                </div>
+            </div>
+            <section id="offer" class="container">
+                <div class="offer">
+                    <h1 class="inv"><span class="accent">Enjoy</span> premium coffee at our charming cafe</h1>
+                    <p class="medium inv">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+                    <a href="./menu.html">
+                        <div class="menubutton flexbox">
+                            <p class="link">Menu</p>
+                            <div class="show">
+                                <img src="images/icons/coffee-cup.svg" alt="icon">
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section id="favorite">
+                <h2>Choose your <span class="accent">favorite</span> coffee</h2>
+                <div class="slider flexbox">
+                    <div class="roundbutton hide">
+                        <img src="images/icons/arrow-left.svg" alt="icon">
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/slider/1.png" alt="slide">
+                        <h3>S’mores Frappuccino</h3>
+                        <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                        <h3>$5.50</h3>
+                    </div>
+
+                    <div class="roundbutton hide">
+                        <img src="images/icons/arrow-right.svg" alt="icon">
+                    </div>       
+                </div>
+                <div>
+                    <span class="dot selected"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>Resource is <span class="accent">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+                <div class="colage flexbox">
+                    <div class="block">
+                        <div class="image margin"><img src="images/about/1.png" alt="about"></div>
+                        <div class="image crop"><img src="images/about/2.png" alt="about"></div>
+                    </div>
+                    <div class="block">
+                        <div class="image margin crop"><img src="images/about/3.png" alt="about"></div>
+                        <div class="image"><img src="images/about/4.png" alt="about"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="mobile" class="flexbox">
+                <div class="block">
+                    <h2><span class="accent">Download</span> our app to start ordering</h2>
+                    <p class="medium">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+                    <div class="market flexbox">
+                        <div class="marketbutton">
+                            <div class="button-icon"><img src="images/icons/apple.svg" alt="icon"></div>
+                            <div class="button-content">
+                                <p class="caption">Available on the</p>
+                                <p class="link">App Store</p>
+                            </div> 
+                        </div>
+                        <div class="marketbutton">
+                            <div class="button-icon"><img src="images/icons/google.svg" alt="icon"></div>
+                            <div class="button-content">
+                                <p class="caption">Available on the</p>
+                                <p class="link">Google Play</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="mob"><img src="images/mobile.png" alt="mobile"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section id="contact" class="flexbox">
+                <div class="footer-block inv">
+                    <h2>Sip, Savor, Smile. <br> <span class="accent">It’s coffee time!</span></h2>
+                    <div class="socials flexbox">
+                        <div class="roundbutton soc"><img src="images/icons/twitter.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/instagram.svg" alt="icon"></div>
+                        <div class="roundbutton soc"><img src="images/icons/facebook.svg" alt="icon"></div>
+                    </div>
+                </div>
+                <div class="footer-block inv flexbox">
+                    <h3>Contact us</h3>
+                    <a id="address" href="https://goo.gl/maps/qpjtya1pxzKT96oP6" target="_blank">
+                        <div class="contact flexbox">
+                            <img src="images/icons/pin-alt.png" alt="icon">
+                            <p>8558 Green Rd.,  LA</p>
+                        </div>
+                    </a>
+                    <a id="phone" href='tel:+16035550123'>
+                    <div class="contact flexbox">
+                        <img src="images/icons/phone.png" alt="icon">
+                        <p>+1 (603) 555-0123</p>
+                    </div>
+                    </a>
+                    <div class="contact flexbox">
+                        <img src="images/icons/clock.png" alt="icon">
+                        <p>Mon-Sat: 9:00 AM – 23:00 PM</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <script src="javascript/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.nav-item {
+    margin: 0 1%;
+    display: inline-block;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.nav-item::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+}
+
+.nav-item:hover::after{
+    transform: scaleX(1);
+    transition: all 0.5s;
+}
+
+#header-menu {
+    transition: all 0.5s;
+    position: relative;
+}
+
+#header-menu::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+}
+
+#header-menu:hover::after{
+    transform: scaleX(1);
+    transition: all 0.5s;
+}
+
+
+.instruments{
+    width: 184px;
+    height: 44px;
+}
+
+.offer {
+    max-width: 530px;
+}
+
+#offer {
+    padding: 7%;
+    max-width: 1360px;
+    width: 86%;
+    height: 644px;
+    margin-bottom: 100px;
+    background: url('../images/img-hero.png'), #E1D4C9;
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.toggler {
+    width:88px;
+    height: 44px;
+    border-radius: 100px;
+}
+
+.toggler-option{
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    padding: 2px;
+}
+
+.toggler-option img{
+    margin: 7px;
+}
+
+.menu-item {
+    width: 61px;
+    height: 28px;
+}
+
+.roundbutton.burger {
+    height:44px;
+    width: 44px;
+}
+
+.roundbutton.burger img{
+    height: 11px;
+    width: 11px;
+    padding: 16px;
+    margin: 0px;
+}
+
+.main-menu {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+nav {
+    width: 400px;
+}

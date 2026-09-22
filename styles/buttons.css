@@ -1,0 +1,71 @@
+.roundbutton{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.roundbutton img{
+    max-width: 24px;
+    margin: 17px;
+}
+
+.marketbutton{
+    width: 200px;
+    height: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 10px 0;
+}
+
+.marketbutton .butten-content{
+    text-align: left;
+    
+}
+
+.marketbutton img{
+    max-width: 36px;
+    margin: 10px 15px;
+}
+
+.menubutton {
+    width: 44px;
+    height:  24px;
+    padding: 20px 78px 20px 78px;
+    border-radius: 100px;
+    gap: 8px;
+}
+
+.show {
+    display: none;
+}
+
+.menubutton:hover .show{
+    display: block;
+}
+
+.marketbutton:hover img, .roundbutton:hover img{
+    filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+}
+
+
+body:not(.dark) .soc.roundbutton:hover img{
+    filter: brightness(0) saturate(100%) invert(24%) sepia(9%) saturate(133%) hue-rotate(2deg) brightness(96%) contrast(96%);
+}
+
+
+.dark .marketbutton img,.dark .roundbutton img, .dark .menu-item img, .dark .menubutton:hover img{
+    filter:brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+}
+
+.p {
+    margin:0;
+}

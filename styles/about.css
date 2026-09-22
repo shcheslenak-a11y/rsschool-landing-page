@@ -1,0 +1,23 @@
+.colage .margin{
+    margin-bottom: 40px;
+}
+
+.colage .image{
+    border-radius: 20px;
+    max-width: 660px;
+    max-height: 590px;
+    overflow: hidden;
+}
+.colage img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+}
+.colage .image.crop{
+    max-height: 430px;
+}
+
+.colage .image:hover img{
+    transform: scale(1);
+    transition: all 0.5s;
+}
