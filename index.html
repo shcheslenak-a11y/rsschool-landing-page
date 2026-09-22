@@ -22,10 +22,10 @@
 
     <body>
         <header>
-            <div class="flexbox">
+            <div class="flexbox main-menu">
                 <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
                 <nav class="nav">
-                    <ul class="">
+                    <ul>
                         <li class="nav-item link"><a href="#favorite">Favorite coffee</a></li>
                         <li class="nav-item link"><a href="#about">About</a></li>
                         <li class="nav-item link"><a href="#mobile">Mobile app</a></li>
@@ -34,8 +34,8 @@
                 </nav> 
                 <div class="instruments flexbox">
                     <div class="toggler flexbox">
-                        <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg"></div>
-                        <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg"></div>
+                        <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg" alt="sun"></div>
+                        <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg" alt="moon"></div>
                     </div>
                     <a id="header-menu" href="./menu.html" class="link hide"><div class="menu-item flexbox"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
                     <div class="burger roundbutton hidden" onclick="change()">
@@ -89,11 +89,11 @@
             <section id="about">
                 <h2>Resource is <span class="accent">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
                 <div class="colage flexbox">
-                    <div>
+                    <div class="block">
                         <div class="image margin"><img src="images/about/1.png" alt="about"></div>
                         <div class="image crop"><img src="images/about/2.png" alt="about"></div>
                     </div>
-                    <div>
+                    <div class="block">
                         <div class="image margin crop"><img src="images/about/3.png" alt="about"></div>
                         <div class="image"><img src="images/about/4.png" alt="about"></div>
                     </div>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <div class="block">
-                    <img src="images/mobile.png" alt="mobile">
+                    <div class="mob"><img src="images/mobile.png" alt="mobile"></div>
                 </div>
             </section>
         </main>

@@ -1,10 +1,10 @@
 ul {
     list-style: none;
-    padding-inline-start: 40px;
+    padding-inline-start: 0;
 }
 
 .nav-item {
-    margin: 0 40px 0 0;
+    margin: 0 1%;
     display: inline-block;
     transition: all 0.5s;
     position: relative;
@@ -56,12 +56,14 @@ ul {
 }
 
 #offer {
-    padding: 100px;
+    padding: 7%;
     max-width: 1360px;
+    width: 86%;
     height: 644px;
     margin-bottom: 100px;
     background: url('../images/img-hero.png'), #E1D4C9;
     background-position: center;
+    background-size: cover;
     border-radius: 40px;
 }
 
@@ -97,4 +99,13 @@ ul {
     width: 11px;
     padding: 16px;
     margin: 0px;
+}
+
+.main-menu {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+nav {
+    width: 400px;
 }

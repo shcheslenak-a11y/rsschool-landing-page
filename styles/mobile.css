@@ -1,5 +1,5 @@
 .market{
-    width: 420px;
+    width: 80%;
 }
 
 .button-icon {
@@ -22,4 +22,8 @@
 
 p {
     margin:auto;
+}
+
+.mob img{
+    width: 100%;
 }
