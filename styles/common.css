@@ -34,7 +34,7 @@ h3 {
     font-weight: 400;
     line-height: 150%;
 }
- .hidden{
+.hidden{
   display: none;
  }
 .caption {
@@ -94,6 +94,10 @@ a {
     line-height: 115%;
   }
 
+  h2 {
+    font-size: 32px;
+  }
+
   #offer {
     padding: 60px 30px;
   }
@@ -140,51 +144,12 @@ a {
 
   
 
-  h2 {
-    font-size: 32px;
-  }
+  
 
   #offer {
     max-width: 348px;
     max-height: 552px;
     padding: 60px 16px;
     height: 644px;
-  }
-
-  .about-img {
-    max-width: 348px;
-    height: 590px;
-  }
-
-   .picture {
-    transform: scale(2.1);
-   }
-
-  .slider-arrow, nav{
-    display: none;
-  }
-
-  .mobile-info {
-     max-width: 348px;
-     margin-bottom: 40px;;
-  }
-
-  .mobile-buttons{
-    width: 200px;
- }
-
-  .mobile-btn:first-child{
-    margin-bottom: 16px;
-  }
-
-  .footer-container {
-   padding: 60px 16px;
-  }
-  .socials {
-    margin-bottom: 40px;
-  }
-
-  .menu-cardset{
-    margin-bottom: 0;
   }
 }
