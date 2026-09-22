@@ -1,11 +1,12 @@
 body {
-    max-width: 1440px;
-    padding: 0 40px;
+    max-width: 1360px;
+    padding: 0 min(40px, 3%);
     margin: 0 auto;
 }
 
 section {
   margin-bottom: 40px;
+  padding: 0 7%;
 }
 
 h1 {
@@ -75,6 +76,24 @@ a {
     display: none;
 }
 
+.block {
+  width:530px;
+}
+
+#header-menu p {
+  margin: auto;
+}
+
+@media screen and (max-width: 1327px){
+  .crop{
+    display: none;
+  }
+
+  .colage .block{
+    margin: 0 auto
+  }
+}
+
 @media screen and (max-width: 768px){
   h1 {
     font-size: 42px;
@@ -105,6 +124,10 @@ a {
   }
   .hidden {
     display:block;
+  }
+
+  .slide{
+    width: 90%;
   }
 }
 /* ...........380.................. */

@@ -4,9 +4,12 @@
     align-items: center;
     flex-wrap: wrap;
     position: relative;
+    margin: 0 auto;
 }
 .slide {
-    max-width: 480px;
+    max-width: 530px;
+    max-width: 60%;
+    margin: 0 auto;
     margin-bottom: 40px; 
 }
 #favorite {
@@ -14,6 +17,8 @@
 }
 .slide img {
     margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .dot {
