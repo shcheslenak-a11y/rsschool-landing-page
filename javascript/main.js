@@ -1,15 +1,17 @@
 let storage = window.localStorage;
-let burgerCur = 0
 let cur = 2;
+
+
 let load = 0;
-
 setDark(storage.getItem("dark-theme"));
-
+load = 1;
 
 function change() {
-    burgerCur += 1
     let img = document.getElementById("burger")
-    img.setAttribute("src", `images/icons/menu-${burgerCur%2 ? "close" : "open"}.svg`)
+    
+    img.setAttribute("src", `images/icons/menu-${document.getElementById("bmenu-main").classList.toggle("opened") ? "open" : "close"}.svg`)
+    
+   
 }
 
 function setDark(n) {
@@ -30,4 +32,12 @@ function setDark(n) {
     }
     
 }
-load = 1;
+function closeMenu(){
+    document.getElementById("bmenu-main").classList.remove("opened")
+    document.getElementById("burger").setAttribute("src", `images/icons/menu-close.svg`)
+}
+function resize() {
+    if (window.innerWidth > 768) {
+        closeMenu()
+    }
+}

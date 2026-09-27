@@ -16,11 +16,11 @@
         
     </head>
 
-    <body>
+    <body onresize="resize()">
         <header>
             <div class="flexbox main-menu">
                 <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
-                <nav class="nav">
+                <nav class="nav hide">
                     <ul>
                         <li class="nav-item link"><a href="#favorite">Favorite coffee</a></li>
                         <li class="nav-item link"><a href="#about">About</a></li>
@@ -28,18 +28,31 @@
                         <li class="nav-item link"><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav> 
-                <div class="instruments flexbox">
+                <div id="instruments">
                     <div class="toggler flexbox">
                         <div id="light" class="toggler-option" onclick="setDark(0)"><img src="images/icons/sun.svg" alt="sun"></div>
                         <div id="dark" class="toggler-option"  onclick="setDark(1)"><img src="images/icons/moon.svg" alt="moon"></div>
                     </div>
                     <a id="header-menu" href="./menu.html" class="link hide"><div class="menu-item flexbox"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
-                    <div class="burger roundbutton hidden" onclick="change()">
+                    <div id="bmenu-icon" onclick="change()">
                         <img src="images/icons/menu-close.svg" id="burger" alt="icon">
                     </div>
                 </div>
             </div>
         </header>
+        <div id="bmenu-main">
+            <div  class="burger-menu">
+                <nav class="burger-nav">
+                    <ul>
+                        <li class="burger-link link"><a href="#favorite">Favorite coffee</a></li>
+                        <li class="burger-link link"><a href="#about">About</a></li>
+                        <li class="burger-link link"><a href="#mobile">Mobile app</a></li>
+                        <li class="burger-link link"><a href="#contact">Contact us</a></li>
+                    </ul>
+                </nav>
+                <a href="./menu.html" class="burger-link"><div class="coffee-menu"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
+            </div>
+        </div>
 
         <main>
             <section>
