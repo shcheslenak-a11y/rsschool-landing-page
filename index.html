@@ -63,26 +63,42 @@
         <main>
             <section id="favorite">
                 <h2>Choose your <span class="accent">favorite</span> coffee</h2>
-                <div class="slider flexbox">
-                    <div class="roundbutton hide">
-                        <img src="images/icons/arrow-left.svg" alt="icon">
+                <div id="slider">
+                    <div class="slider flexbox">
+                        <div class="roundbutton hide" onclick="changeSlide(-1)">
+                            <img src="images/icons/arrow-left.svg" alt="icon">
+                        </div>
+                        <div id="slide-window" class="slides" onscrollend="scrollSlides()">
+                            
+                            <div id="2" class="slide">
+                                <img src="images/slider/3.png" alt="slide">
+                                <h3>S’mores Frappuccino 22</h3>
+                                <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <h3>$5.50</h3>
+                            </div>
+                            <div id="0" class="slide">
+                                <img src="images/slider/1.png" alt="slide">
+                                <h3>S’mores Frappuccino</h3>
+                                <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <h3>$5.50</h3>
+                            </div>
+                            <div id="1" class="slide">
+                                <img src="images/slider/2.png" alt="slide">
+                                <h3>S’mores Frappuccino 22</h3>
+                                <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <h3>$5.50</h3>
+                            </div>
+                            
+                        </div>
+                        <div class="roundbutton hide" onclick="changeSlide(1)">
+                            <img src="images/icons/arrow-right.svg" alt="icon">
+                        </div>       
                     </div>
-
-                    <div class="slide">
-                        <img src="images/slider/1.png" alt="slide">
-                        <h3>S’mores Frappuccino</h3>
-                        <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                        <h3>$5.50</h3>
+                    <div id="controls">
+                        <div id="control-0" class="control on" onclick="clickControl(0)" data-index="0"></div>
+                        <div id="control-1" class="control" onclick="clickControl(1)" data-index="1"></div>
+                        <div id="control-2" class="control" onclick="clickControl(2)" data-index="2"></div>
                     </div>
-
-                    <div class="roundbutton hide">
-                        <img src="images/icons/arrow-right.svg" alt="icon">
-                    </div>       
-                </div>
-                <div>
-                    <span class="dot selected"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
                 </div>
             </section>
 
@@ -158,5 +174,6 @@
             </section>
         </footer>
         <script src="javascript/main.js"></script>
+        <script src="javascript/slider.js"></script>
     </body>
 </html>
