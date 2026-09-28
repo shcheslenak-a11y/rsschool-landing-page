@@ -57,25 +57,25 @@
         <main>
             <section>
                 <h2>Behind each of our cups hides an <span class="accent">amazing surprise</span></h2>
-                <div class="tab flexbox">
-                    <div class="selected choice flexbox">
-                        <div class="choice-icon"><img src="images/icons/coffee.svg" alt="icon"></div>
-                        <div class="choice-text">Coffee</div>
+                <div id="tabs">
+                    <div id="coffee" class="selected option" onclick="selectCategory(this.id)">
+                        <div class="opt-symbol"><img src="images/icons/coffee.svg" alt="icon"></div>
+                        <div class="opt-text"><p class="link">Coffee</p></div>
                     </div>
-                    <div class="choice flexbox">
-                        <div class="choice-icon"><img src="images/icons/tea.svg" alt="icon"></div>
-                        <div class="choice-text">Tea</div>
+                    <div id="tea" class="option" onclick="selectCategory(this.id)">
+                        <div class="opt-symbol"><img src="images/icons/tea.svg" alt="icon"></div>
+                        <div class="opt-text"><p class="link">Tea</p></div>
                     </div>
-                    <div class="choice flexbox">
-                        <div class="choice-icon"><img src="images/icons/dessert.svg" alt="icon"></div>
-                        <div class="choice-text">Dessert</div>
+                    <div id="dessert" class="option" onclick="selectCategory(this.id)">
+                        <div class="opt-symbol"><img src="images/icons/dessert.svg" alt="icon"></div>
+                        <div class="opt-text"><p class="link">Dessert</p></div>
                     </div>
                 </div>
             </section>
             <div id="modal" class="modal-window flexbox"></div>
             <section>
                 
-                <div id="catalog" class="grid flexbox">     </div> 
+                <div id="grid">     </div> 
                 <div id="loadall" class="roundbutton hidden center" onclick="showAll()">
                     <img src="images/icons/refresh.svg" alt="icon">
                 </div>

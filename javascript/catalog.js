@@ -25,7 +25,12 @@ function loadCategory(category) {
             json[category].forEach((element, ind) => {
                 list+=createItem(element, ind)
             });
-            document.getElementById("catalog").innerHTML=list
+            document.getElementById("grid").innerHTML=list
+            if (json[category].length > showNumber){
+                document.getElementById("loadall").classList.remove("disabled")
+            } else {
+                document.getElementById("loadall").classList.add("disabled")
+            }
         })
         .catch((e) => console.error(e));
 }
@@ -40,11 +45,11 @@ function selectCategory(category){
 }
 
 function showAll(){
-    var items = document.getElementsByClassName("hide-item");
-    for (let el of items) {
-        el.classList.remove("hide-item");
+    const items = document.getElementsByClassName("hide-item");
+    while (items.length > 0) {
+        items[0].classList.remove("hide-item");
     }
-    //document.getElementById("loadall").style.display="none";
+    document.getElementById("loadall").classList.add("disabled")
 }
 
 function formModal(data){
@@ -56,8 +61,8 @@ function formModal(data){
             selecetdSize = opt
         }
         sizeOptions += `<div id="${opt}" class="option flexbox${sizeOptions.length == 0 ? " selected" : ""}" onclick="selectSize(this.id)" data-value="${data.sizes[opt]["add-price"]}">
-                                        <div class="opt-symbol"><p class="link">${opt}</p></div>
-                                        <div class="opt-text">${data.sizes[opt].size}</div>
+                                        <div class="opt-symbol"><p class="link">${opt.toUpperCase()}</p></div>
+                                        <div class="opt-text"><p class="link">${data.sizes[opt].size}</p></div>
                                     </div>`
         
     }
@@ -65,11 +70,11 @@ function formModal(data){
     data.additives.forEach((item, ind) => {
         additives += `<div id="option-${ind + 1}"  class="option" onclick="addAdditivities(this.id)" data-value="${item["add-price"]}">
                                         <div class="opt-symbol"><p class="link">${ind + 1}</p></div>
-                                        <div class="opt-text"><p class="link">${item.name}</p></div>
+                                        <div class="opt-text"><p class="link">${item.name}</div>
                                     </div>`
     })
 
-    return `<div class="modal-content flexbox">
+    return `<div id="modal-content" onclick="event.stopPropagation()">
                 <div class="box"><img src="${data.image_path}" alt="item"></div>
                     <div class="modal-description">
                         <div class="title">
@@ -103,23 +108,22 @@ function showModal(ind) {
         .then((res) => res.json())
         .then((json) => {
             document.getElementById("modal").innerHTML=formModal(json[currentCategory][ind])
+            modal.style.display = "flex";
+            document.body.classList.add("block-scroll")
         })
         .catch((e) => console.error(e));
 
-    modal.style.display = "flex";
+    
 }
 
 function closeModal() {
     var modal = document.getElementById("modal");
-
-    console.log(modal.getElementsByClassName("selected"))
+    document.body.classList.remove("block-scroll")
     modal.style.display = "none";
 }
 
 
 function selectSize(size) {
-    console.log(size)
-    console.log(selecetdSize)
     if (selecetdSize != size){
         document.getElementById(size).classList.add("selected");
         document.getElementById(selecetdSize).classList.remove("selected");
@@ -146,3 +150,15 @@ function calculatePrice(){
 }
 
 loadCategory(currentCategory)
+
+
+document.addEventListener("keydown", (event) => {
+        if (event.code == "Escape") {
+            closeModal()
+        }
+});
+
+document.getElementById("modal").addEventListener("click", (event) => {
+    closeModal()
+})
+

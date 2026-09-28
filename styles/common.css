@@ -1,12 +1,13 @@
 body {
-    max-width: 1360px;
-    padding: 0 min(40px, 3%);
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 40px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 section {
   margin-bottom: 40px;
-  padding: 0 7%;
 }
 
 h1 {
@@ -102,6 +103,16 @@ a {
 
 }
 
+.button-seconadry:hover {
+  color: var(--inv-color);
+  background-color: var(--container-color);
+  border: none;
+}
+
+.block-scroll {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1327px){
   .crop{
     display: none;
@@ -113,6 +124,10 @@ a {
 }
 
 @media screen and (max-width: 768px){
+  #modal-content{
+    width: 688px !important; 
+  }
+
   h1 {
     font-size: 42px;
     line-height: 115%;
@@ -155,13 +170,33 @@ a {
     width: 90%;
   }
 }
+
+@media screen and (max-width: 767px) {
+  body{
+    padding: 0 5%;
+  }
+  #modal-content .box{
+    display: none;
+  }
+  .modal-description{
+    width: 100% !important;
+  }
+
+}
 /* ...........380.................. */
 @media screen and (max-width: 380px){
-
+  body{
+    padding: 0 16px;
+  }
   #offer {
     max-width: 348px;
     max-height: 552px;
     padding: 60px 16px;
     height: 644px;
   }
+
+  #modal-content{
+    width: 342px !important; 
+  }
+  
 }

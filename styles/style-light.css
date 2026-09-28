@@ -4,7 +4,7 @@ body {
   --accent-color: #B0907A;
   --overlay-color: #403F3Dcc;
   --border-color: #C1B6AD;
-  --border-inv--color: #665F55;
+  --border-inv-color: #665F55;
   --primary-color: #403F3D;
   --inv-color: #E1D4C9;
 }
@@ -16,7 +16,7 @@ body {
   --accent-color: #B0907A;
   --overlay-color: #292826cc;
   --border-color: #665F55;
-  --border-inv--color: #C1B6AD;
+  --border-inv-color: #C1B6AD;
   --primary-color: #E1D4C9;
   --inv-color: #E1D4C9;
 }
@@ -139,10 +139,6 @@ h2, h3 {
     background-color: var(--page-color)
 }
 
-.modal-content {
-  background-color: var(--page-color);
-}
-
 .option{
   border: 1px solid var(--border-color);
   color: var(--primary-color);
@@ -160,6 +156,7 @@ h2, h3 {
 .option:hover, .selected.option{
   color: var(--inv-color);
   background-color: var(--container-color);
+  border: none;
 }
 .option:hover .opt-symbol,.selected  .opt-symbol{
   background-color: var(--page-color);

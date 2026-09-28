@@ -72,7 +72,7 @@
 }
 
 .control.on{
-    background-color: var(--border-inv--color);
+    background-color: var(--border-inv-color);
 }
 
 ::-webkit-scrollbar {

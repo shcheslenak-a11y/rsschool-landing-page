@@ -8,10 +8,9 @@ load = 1;
 
 function change() {
     let img = document.getElementById("burger")
-    
-    img.setAttribute("src", `images/icons/menu-${document.getElementById("bmenu-main").classList.toggle("opened") ? "open" : "close"}.svg`)
-    
-   
+    let current = document.getElementById("bmenu-main").classList.toggle("opened");
+    img.setAttribute("src", `images/icons/menu-${current ? "open" : "close"}.svg`)
+    document.body.classList[current ? "add" : "remove"]("block-scroll")
 }
 
 function setDark(n) {
@@ -35,7 +34,9 @@ function setDark(n) {
 function closeMenu(){
     document.getElementById("bmenu-main").classList.remove("opened")
     document.getElementById("burger").setAttribute("src", `images/icons/menu-close.svg`)
+    document.body.classList.remove("block-scroll")
 }
+
 function resize() {
     if (window.innerWidth > 768) {
         closeMenu()

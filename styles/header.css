@@ -135,7 +135,7 @@ ul {
     height: 44px;
     width: 44px;
     border-radius: 100px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-inv-color);
     display: none;
     justify-content: center;
     align-items: center;
