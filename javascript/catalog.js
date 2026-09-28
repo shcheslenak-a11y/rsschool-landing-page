@@ -151,13 +151,6 @@ function calculatePrice(){
 
 loadCategory(currentCategory)
 
-
-document.addEventListener("keydown", (event) => {
-        if (event.code == "Escape") {
-            closeModal()
-        }
-});
-
 document.getElementById("modal").addEventListener("click", (event) => {
     closeModal()
 })
