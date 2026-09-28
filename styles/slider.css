@@ -1,16 +1,40 @@
+#slider{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+}
+
 .slider{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-    margin: 0 auto;
+    width: 100%;
+
 }
-.slide {
-    max-width: 530px;
+.slides{
+    width: 530px;
     max-width: 60%;
     margin: 0 auto;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    flex-flow: row nowrap;
+    overflow: auto;
+    scroll-snap-stop: always;
+    position: relative;
+}
+
+.slide {
+    width: 530px;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    scroll-snap-align: start;
+    flex: 1 1 auto;
+    min-width: 100%;
 }
 #favorite {
     text-align: center;
@@ -31,3 +55,27 @@
 .selected {
     background-color: #665F55;
 }
+
+#controls{
+    display: flex;
+    justify-content: space-between;
+    width: 144px;
+    height: 4px;
+    margin: 0 auto;
+}
+
+.control{
+    width: 40px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: var(--border-color);
+}
+
+.control.on{
+    background-color: var(--border-inv-color);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+} 
