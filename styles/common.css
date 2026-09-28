@@ -66,7 +66,9 @@ h3 {
    left: 40px; 
    width: 530px;
 }
-
+p{
+  margin: 0;
+}
 a {
     text-decoration: none;
     transition: all 0.5s;
@@ -119,6 +121,10 @@ a {
   overflow: hidden;
 }
 
+.icon {
+  filter: var(--icon-color);
+}
+
 @media screen and (max-width: 1327px){
   .crop{
     display: none;
@@ -158,8 +164,12 @@ a {
     transition: all 1s linear;
   }
 
-  .crop, .hide, #header-menu, .hide-item{
+  .crop, .hide, #header-menu, .hidden-card{
     display: none;
+  }
+
+  .hidden-card.showed{
+    display: block;
   }
   .hidden {
     display: block;
@@ -170,10 +180,6 @@ a {
   }
   #bmenu-icon {
     display: flex !important;
-  }
-
-  .slide{
-    width: 90%;
   }
 }
 
@@ -186,6 +192,9 @@ a {
   }
   .modal-description{
     width: 100% !important;
+  }
+  .button-slider{
+    display: none !important;
   }
 
 }

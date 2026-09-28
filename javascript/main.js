@@ -53,6 +53,7 @@ function closeMenu(){
 function resize() {
     if (window.innerWidth > 768) {
         closeMenu()
+        if (typeof hideCards == 'function' ) hideCards()
     }
 }
 

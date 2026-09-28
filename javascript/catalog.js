@@ -4,7 +4,7 @@ var selecetdSize = ""
 
 
 function createItem(data, index) {
-    return `<div class="preview${(index >= showNumber ? " hide-item" : "")}" onclick="showModal(${index })">
+    return `<div class="preview${(index >= showNumber ? " hidden-card" : "")}" onclick="showModal(${index })">
                         <div class="box"><img src="${data.image_path}" alt="item"></div>
                         <div class="description">
                             <div class="title">
@@ -45,11 +45,21 @@ function selectCategory(category){
 }
 
 function showAll(){
-    const items = document.getElementsByClassName("hide-item");
-    while (items.length > 0) {
-        items[0].classList.remove("hide-item");
+    const items = document.getElementsByClassName("hidden-card");
+    for(let el of items) {
+        el.classList.add("showed");
     }
     document.getElementById("loadall").classList.add("disabled")
+}
+
+function hideCards(){
+    const items = document.getElementsByClassName("showed");
+    if(items.length){
+        while (items.length > 0) {
+            items[0].classList.remove("showed");
+        }
+        document.getElementById("loadall").classList.remove("disabled");
+    }
 }
 
 function formModal(data){
@@ -94,7 +104,7 @@ function formModal(data){
                             <h3 id="price" data-value="${data.price}">$${data.price}</h3>
                         </div>
                         <div id="alert">
-                            <img src="images/icons/info-empty.svg" alt="item">
+                            <img class="icon" src="images/icons/info-empty.svg" alt="item">
                             <p class="caption">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
                         </div>
                         <div class="button-seconadry" onclick="closeModal()"><p class=link">Close</p></div>
