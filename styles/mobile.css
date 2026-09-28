@@ -5,7 +5,6 @@
 .button-icon {
     width: 36px;
     height: 36px;
-    padding: 13px;
 }
 
 .button-icon img{
@@ -14,16 +13,39 @@
 
 .button-content {
     height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 #mobile .block{
     max-width: 630px;
 }
 
-p {
-    margin:auto;
-}
-
 .mob img{
     width: 100%;
+}
+
+.button-store{
+    width:200px;
+    height:64px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.button-store:hover{
+    background-color: var(--container-color);
+    border: none;
+    color: var(--inv-color);
+}
+
+.button-store:hover .icon{
+    filter: var(--icon-hover-color);
 }

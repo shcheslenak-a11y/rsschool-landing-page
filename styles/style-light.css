@@ -2,11 +2,14 @@ body {
   --page-color: #E1D4C9;
   --container-color: #665F55;
   --accent-color: #B0907A;
-  --overlay-color: #403F3D;
+  --overlay-color: #403F3Dcc;
   --border-color: #C1B6AD;
-  --border-inv--color: #665F55;
+  --border-inv-color: #665F55;
   --primary-color: #403F3D;
   --inv-color: #E1D4C9;
+  --icon-color: none;
+  --icon-hover-color: brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+  --burger-color: none;
 }
 
 
@@ -14,11 +17,13 @@ body {
   --page-color: #292826;
   --container-color: #403F3D;
   --accent-color: #B0907A;
-  --overlay-color: #292826;
+  --overlay-color: #292826cc;
   --border-color: #665F55;
-  --border-inv--color: #C1B6AD;
+  --border-inv-color: #C1B6AD;
   --primary-color: #E1D4C9;
   --inv-color: #E1D4C9;
+  --icon-color: var(--icon-hover-color);
+  --burger-color: brightness(0) saturate(100%) invert(77%) sepia(12%) saturate(229%) hue-rotate(345deg) brightness(94%) contrast(92%);
 }
 
 .nav-item::after, #header-menu::after{
@@ -117,6 +122,7 @@ h2, h3 {
   color: var(--primary-color);
   background-color: var(--page-color);
 }
+
 .choice-icon{
   background-color: var(--border-color);
 }
@@ -136,4 +142,27 @@ h2, h3 {
 
 .soc.roundbutton:hover {
     background-color: var(--page-color)
+}
+
+.option{
+  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  background-color: var(--page-color);
+}
+
+.opt-symbol{
+  background-color: var(--border-color);
+}
+
+.option:hover .opt-symbol, .selected.option .opt-symbol{
+  color: var(--primary-color);
+}
+
+.option:hover, .selected.option{
+  color: var(--inv-color);
+  background-color: var(--container-color);
+  border: none;
+}
+.option:hover .opt-symbol,.selected  .opt-symbol{
+  background-color: var(--page-color);
 }
