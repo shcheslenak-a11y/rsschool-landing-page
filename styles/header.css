@@ -61,7 +61,7 @@ ul {
     width: 86%;
     height: 644px;
     margin-bottom: 100px;
-    background: url('../images/img-hero.png'), #E1D4C9;
+    background: url('../images/img-hero.png');
     background-position: center;
     background-size: cover;
     border-radius: 40px;
@@ -117,7 +117,9 @@ ul {
     overflow: hidden;
     transition: 0.5s;
 }
-
+#burger{
+    filter:var(--burger-color);
+}
 .burger-menu{
   display: flex;
 

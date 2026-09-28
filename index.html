@@ -20,7 +20,7 @@
         
     </head>
 
-    <body>
+    <body onresize="resize()">
         <header>
             <div class="flexbox main-menu">
                 <a href="./index.html"><img src="images/logo.png" id="logo" alt="logo"></a>
@@ -54,7 +54,7 @@
                         <li class="burger-link link"><a href="#contact">Contact us</a></li>
                     </ul>
                 </nav>
-                <a href="./menu.html" class="burger-link"><div class="coffee-menu"><p class="link">Menu</p><img src="images/icons/coffee-cup.svg" alt="icon"></div></a>
+                <a href="./menu.html" class="burger-link"><div class="coffee-menu"><p class="link">Menu</p><img class="icon" src="images/icons/coffee-cup.svg" alt="icon"></div></a>
             </div>
         </div>
         <main>
@@ -66,7 +66,7 @@
                         <div class="menubutton flexbox">
                             <p class="link">Menu</p>
                             <div class="show">
-                                <img src="images/icons/coffee-cup.svg" alt="icon">
+                                <img class="icon" src="images/icons/coffee-cup.svg" alt="icon">
                             </div>
                             
                         </div>
@@ -78,16 +78,16 @@
                 <h2>Choose your <span class="accent">favorite</span> coffee</h2>
                 <div id="slider">
                     <div class="slider flexbox">
-                        <div class="roundbutton hide" onclick="changeSlide(-1)">
-                            <img src="images/icons/arrow-left.svg" alt="icon">
+                        <div class="button-slider" onclick="changeSlide(-1)">
+                            <img class="icon" src="images/icons/arrow-left.svg" alt="icon">
                         </div>
                         <div id="slide-window" class="slides" onscrollend="scrollSlides()">
                             
                             <div id="2" class="slide">
                                 <img src="images/slider/3.png" alt="slide">
-                                <h3>S’mores Frappuccino 22</h3>
-                                <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                                <h3>$5.50</h3>
+                                <h3>Ice coffee</h3>
+                                <p class="medium">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                <h3>$4.50</h3>
                             </div>
                             <div id="0" class="slide">
                                 <img src="images/slider/1.png" alt="slide">
@@ -97,14 +97,14 @@
                             </div>
                             <div id="1" class="slide">
                                 <img src="images/slider/2.png" alt="slide">
-                                <h3>S’mores Frappuccino 22</h3>
-                                <p class="medium">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                                <h3>$5.50</h3>
+                                <h3>Caramel Macchiato</h3>
+                                <p class="medium">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                <h3>$5.00</h3>
                             </div>
                             
                         </div>
-                        <div class="roundbutton hide" onclick="changeSlide(1)">
-                            <img src="images/icons/arrow-right.svg" alt="icon">
+                        <div class="button-slider" onclick="changeSlide(1)">
+                            <img class="icon" src="images/icons/arrow-right.svg" alt="icon">
                         </div>       
                     </div>
                     <div id="controls">
@@ -133,17 +133,17 @@
                     <h2><span class="accent">Download</span> our app to start ordering</h2>
                     <p class="medium">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
                     <div class="market flexbox">
-                        <div class="marketbutton">
-                            <div class="button-icon"><img src="images/icons/apple.svg" alt="icon"></div>
+                        <div class="button-store">
+                            <div class="button-icon"><img class="icon" src="images/icons/apple.svg" alt="icon"></div>
                             <div class="button-content">
                                 <p class="caption">Available on the</p>
                                 <p class="link">App Store</p>
                             </div> 
                         </div>
-                        <div class="marketbutton">
-                            <div class="button-icon"><img src="images/icons/google.svg" alt="icon"></div>
+                        <div class="button-store">
+                            <div class="button-icon"><img class="icon" src="images/icons/google.svg" alt="icon"></div>
                             <div class="button-content">
-                                <p class="caption">Available on the</p>
+                                <p class="caption">Available on</p>
                                 <p class="link">Google Play</p>
                             </div>
                         </div>

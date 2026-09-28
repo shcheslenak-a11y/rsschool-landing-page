@@ -9,7 +9,7 @@ function scrollSlides() {
 
     var slides = document.getElementById("slide-window");
     var slideWidth = slides.offsetWidth;
-    var current = Math.floor(slides.scrollLeft / slideWidth );
+    var current = Math.round(slides.scrollLeft / slideWidth );
 
     if (slide != current) {
         let act = slides.children[slide];

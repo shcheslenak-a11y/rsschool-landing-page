@@ -7,6 +7,9 @@ body {
   --border-inv-color: #665F55;
   --primary-color: #403F3D;
   --inv-color: #E1D4C9;
+  --icon-color: none;
+  --icon-hover-color: brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(443%) hue-rotate(325deg) brightness(93%) contrast(88%);
+  --burger-color: none;
 }
 
 
@@ -19,6 +22,8 @@ body {
   --border-inv-color: #C1B6AD;
   --primary-color: #E1D4C9;
   --inv-color: #E1D4C9;
+  --icon-color: var(--icon-hover-color);
+  --burger-color: brightness(0) saturate(100%) invert(77%) sepia(12%) saturate(229%) hue-rotate(345deg) brightness(94%) contrast(92%);
 }
 
 .nav-item::after, #header-menu::after{
